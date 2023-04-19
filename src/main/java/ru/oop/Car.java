@@ -3,12 +3,12 @@ package ru.oop;
 public class Car {
 
     /**
-     * доехать до заданного места
+     * довезти человеа как можно ближе к указанному месту
+     * и установить person.setPosition("ближайшая точка к destination, до которой можно доехать")
      *
+     * @param person человек
      * @param destination место назначения
-     * @return ближашйие к destination место, до которого смогла доехать машина
      */
-    public Position drive(Position destination){
-        return null;
+    public void drive(Person person, Position destination){
     }
 }
