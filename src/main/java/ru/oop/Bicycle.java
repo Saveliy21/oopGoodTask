@@ -1,6 +1,6 @@
 package ru.oop;
 
-public class Bus implements Transport{
+public class Bicycle implements Transport{
     @Override
     public Position getPosition() {
         return null;

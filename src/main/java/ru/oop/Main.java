@@ -42,16 +42,12 @@ public class Main {
      * на любом, заранее определённом транспорте
      */
     public static void moveTo(Person person, Position destination) {
-        List<Transport> transports = new ArrayList<>(Arrays.asList(new Car(), new Bus(), new Bisicle(), new Underground()));
+        List<Transport> transports = Arrays.asList(new Car(), new Bus(), new Bicycle(), new Underground());
         for (Transport transport : transports) {
-            if (person.getPosition() == destination) {
-                break;
-            } else {
-                if (person.getPosition() != transport.getPosition()) {
-                    person.walk(transport.getPosition());
-                }
-                person.setPosition(transport.drive(destination));
+            if (!person.getPosition().equals(transport.getPosition())) {
+                person.walk(transport.getPosition());
             }
+            transport.drive(person, destination);
         }
         person.walk(destination);
         assert person.getPosition() == destination;
