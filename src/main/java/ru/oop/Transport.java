@@ -1,31 +1,27 @@
 package ru.oop;
 
-public class Transport implements Positioned{
-
+public interface Transport extends Positioned{
     /**
      * получить позицию транспорта
      * @return позиция
      */
     @Override
-    public Position getPosition() {
-        return null;
-    }
+     Position getPosition();
 
     /**
      * установить позицию
-     * @param position
+     * @param position позиция
      */
     @Override
-    public void setPosition(Position position) {
-    }
+    void setPosition(Position position);
 
     /**
-     * доехать к указаному месту
+     * довезти человеа как можно ближе к указанному месту
+     * и установить person.setPosition("ближайшая точка к destination, до которой можно доехать")
      *
-     * @param destionation место
-     * @return позиция, ближайшая к указанной destination
+     * @param person человек
+     * @param destination место назначения
      */
-    public Position drive(Position destionation){
-        return null;
-    }
+    void drive(Person person, Position destination);
+
 }
